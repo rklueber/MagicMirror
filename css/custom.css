@@ -8,6 +8,9 @@
  * Add any custom CSS below.                         *
  * Changes to this files will be ignored by GIT. *
  *****************************************************/
+html {
+    cursor: auto;
+}
 
 body {
   margin: 20px;
@@ -34,11 +37,11 @@ header {
 }
 
 .region.bottom.left {
-    width: calc(50%);
+    width: calc(47%);
 }
 
 .region.bottom.right {
-    width: calc(50%);
+    width: calc(47%);
 }
 
 .calendar .symbol {
