@@ -135,6 +135,10 @@ Module.register("calendar", {
 			var event = events[e];
 			var eventWrapper = document.createElement("tr");
 
+			if ((event.endDate - event.startDate) >= 24*3600*1000-1) {
+				event.fullDayEvent = true;
+			}
+
 			eventWrapper.className = "normal";
 
 			if (this.config.displaySymbol) {
@@ -272,7 +276,11 @@ Module.register("calendar", {
 			timeWrapper.className = "time light";
 			eventWrapper.appendChild(timeWrapper);
 
-			wrapper.appendChild(eventWrapper);
+	      	// console.log(event, this.config.calendars, { fullDayEventOnly: this.getCalendarProperty(event.url, "fullDayEventOnly", false)});
+
+			if (event.fullDayEvent || !this.getCalendarProperty(event.url, "fullDayEventOnly", false)) {
+				wrapper.appendChild(eventWrapper);
+			}
 
 			// Create fade effect.
 			if (this.config.fade && this.config.fadePoint < 1) {
@@ -430,7 +438,6 @@ Module.register("calendar", {
 				return calendar[property];
 			}
 		}
-
 		return defaultValue;
 	},
 

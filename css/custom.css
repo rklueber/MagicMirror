@@ -17,11 +17,28 @@ body {
   position: absolute;
   height: calc(100% - 40px);
   width: calc(100% - 40px);
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', cursive;
 }
 
 header {
 	text-transform: none;
+  font-family: 'Roboto Condensed', cursive;
+}
+
+.thin {
+  font-family: Roboto, sans-serif;
+}
+
+.light {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.regular {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.bold {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .region.top.left {
