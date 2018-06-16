@@ -1,4 +1,4 @@
-html {
+/summhtml {
   cursor: none;
   overflow: hidden;
   background: #000;
@@ -164,6 +164,7 @@ sup {
 
 .region.bottom .container {
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .region.top .container:empty {

@@ -25,6 +25,10 @@ header {
   font-family: 'Roboto Condensed', cursive;
 }
 
+.module {
+  /*background-color: rgba(60, 60, 60, 0.5);*/
+}
+
 .thin {
   font-family: Roboto, sans-serif;
 }
@@ -42,15 +46,15 @@ header {
 }
 
 .region.top.left {
-    width: calc(40%);
+    width: calc(37%);
 }
 
 .region.top.center {
-    width: calc(20%);
+    width: calc(26%);
 }
 
 .region.top.right {
-    width: calc(40%);
+    width: calc(37%);
 }
 
 .region.bottom.left {
@@ -59,6 +63,10 @@ header {
 
 .region.bottom.right {
     width: calc(47%);
+}
+
+.region.lower.third {
+  top: 55%;
 }
 
 .calendar .symbol {
@@ -228,3 +236,43 @@ color: #ff00ff;
 .MMM-forecast-io .wi-night-snow {
 color: #fff;
 }
+
+/* Default styling block for Calendar [Monthly]
+ *
+ * If you wish to create a custom style, please edit the styleCustom.css file
+ */
+
+
+.calendar_monthly #calendar-th {
+  font-size: 1em;
+}
+
+.calendar_monthly #monthName {
+  font-size: 2em;
+}
+
+.calendar_monthly .calendar-day {
+  text-align: center;
+  width: 14.2%;
+  margin: 0px;
+}
+
+
+.MMM-Sonos .sonos ul .name {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.MMM-Sonos .sonos ul .art img {
+  height: 100px;
+}
+
+.MMM-SoccerLiveScore .MMM-SoccerLiveScore-time {
+  /*display: none;*/
+}
+
+.MMM-forecast-io .summary {
+    color: #999;
+}
+
+

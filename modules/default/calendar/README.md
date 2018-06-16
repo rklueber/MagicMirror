@@ -81,6 +81,7 @@ config: {
 | `maximumEntries`      | The maximum number of events shown.  Overrides global setting. **Possible values:** `0` - `100`
 | `maximumNumberOfDays` | The maximum number of days in the future.  Overrides global setting
 | `auth`                | The object containing options for authentication against the calendar.
+| `fullDayEventOnly`    | Show only full Day Events from this calendar.
 
 
 #### Calendar authentication options:
