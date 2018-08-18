@@ -157,13 +157,8 @@ Module.register("calendar", {
 
 			var eventWrapper = document.createElement("tr");
 
-<<<<<<< HEAD
-			if ((event.endDate - event.startDate) >= 24*3600*1000-1) {
-				event.fullDayEvent = true;
-=======
 			if (this.config.colored && !this.config.coloredSymbolOnly) {
 				eventWrapper.style.cssText = "color:" + this.colorForUrl(event.url);
->>>>>>> 6aa156d95667b230264fd99c5df877b25759e710
 			}
 
 			eventWrapper.className = "normal";
@@ -189,11 +184,6 @@ Module.register("calendar", {
 					}
 					symbolWrapper.appendChild(symbol);
 				}
-
-				if (this.config.colored) {
-					symbolWrapper.style.cssText = "color:" + this.colorForUrl(event.url);
-				}
-
 				eventWrapper.appendChild(symbolWrapper);
 			}else if(this.config.timeFormat === "dateheaders"){
 				var blankCell = document.createElement("td");
@@ -214,10 +204,6 @@ Module.register("calendar", {
 
 					repeatingCountTitle = ", " + yearDiff + ". " + repeatingCountTitle;
 				}
-			}
-
-			if (this.config.colored && !this.config.coloredSymbolOnly) {
-				titleWrapper.style.cssText = "color:" + this.colorForUrl(event.url);
 			}
 
 			titleWrapper.innerHTML = this.titleTransform(event.title) + repeatingCountTitle;
@@ -271,7 +257,7 @@ Module.register("calendar", {
 				var oneMinute = oneSecond * 60;
 				var oneHour = oneMinute * 60;
 				var oneDay = oneHour * 24;
-				if (event.fullDayEvent) {
+				if (event.fullDayEvent || event.endDate - event.startDate >= oneDay) {
 					if (event.today) {
 						timeWrapper.innerHTML = this.capFirst(this.translate("TODAY"));
 					} else if (event.startDate - now < oneDay && event.startDate - now > 0) {
@@ -346,11 +332,7 @@ Module.register("calendar", {
 				eventWrapper.appendChild(timeWrapper);
 			}
 
-	      	// console.log(event, this.config.calendars, { fullDayEventOnly: this.getCalendarProperty(event.url, "fullDayEventOnly", false)});
-
-			if (event.fullDayEvent || !this.getCalendarProperty(event.url, "fullDayEventOnly", false)) {
-				wrapper.appendChild(eventWrapper);
-			}
+			wrapper.appendChild(eventWrapper);
 
 			// Create fade effect.
 			if (this.config.fade && this.config.fadePoint < 1) {
@@ -528,6 +510,7 @@ Module.register("calendar", {
 				return calendar[property];
 			}
 		}
+
 		return defaultValue;
 	},
 
