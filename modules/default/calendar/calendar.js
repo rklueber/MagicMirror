@@ -257,7 +257,7 @@ Module.register("calendar", {
 				var oneMinute = oneSecond * 60;
 				var oneHour = oneMinute * 60;
 				var oneDay = oneHour * 24;
-				if (event.fullDayEvent) {
+				if (event.fullDayEvent || event.startDate - event.endDate >= oneDay) {
 					if (event.today) {
 						timeWrapper.innerHTML = this.capFirst(this.translate("TODAY"));
 					} else if (event.startDate - now < oneDay && event.startDate - now > 0) {
