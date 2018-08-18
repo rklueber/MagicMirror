@@ -13,20 +13,55 @@ html {
 }
 
 body {
-  margin: 20px;
-  position: absolute;
+  margin: 40px;
+  margin-left: 20px;
+  margin-right: 0px;
+  /*position: absolute;*/
   height: calc(100% - 40px);
-  width: calc(100% - 40px);
-  font-family: 'Roboto Condensed', cursive;
+  width: calc(100% - 20px);
 }
 
 header {
 	text-transform: none;
-  font-family: 'Roboto Condensed', cursive;
+/*  background-color: rgba(0,0,0,0.75);
+  color: white;*/
 }
 
 .module {
-  /*background-color: rgba(60, 60, 60, 0.5);*/
+/*  background: inherit;
+  background-attachment: fixed;
+  filter: blur(100px);*/
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  /*box-shadow: 5px 5px 5px 1px #d3d3d3;*/
+/*  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+*/}
+
+.flip {
+/*  padding: 20px;*/
+  /*box-shadow: 5px 5px 5px 1px #d3d3d3;*/
+}
+
+.below {
+/*  z-index: 0;
+*/}
+
+.clock,
+.updatenotification,
+.calendar_monthly,
+.mmm-openhabfloorplan,
+.MMM-DailyBibleVerse,
+.MMM-Sonos,
+.newsfeed,
+.MMM-Wallpaper {
+  background-color: transparent;
+  filter: none;
 }
 
 .thin {
@@ -45,6 +80,11 @@ header {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.large {
+  font-size: 60px;
+  line-height: 60px;
+}
+
 .region.top.left {
     width: calc(37%);
 }
@@ -58,11 +98,11 @@ header {
 }
 
 .region.bottom.left {
-    width: calc(47%);
+    width: calc(50%);
 }
 
 .region.bottom.right {
-    width: calc(47%);
+    width: calc(50%);
 }
 
 .region.lower.third {
@@ -71,7 +111,7 @@ header {
 
 .calendar .symbol {
 	vertical-align: center;
-  	padding-right: 5px;
+  padding-right: 5px;
 }
 
 .calendar .time {
@@ -95,14 +135,21 @@ header {
 	white-space: nowrap;
 }
 
-.clock div.time.bright.large.light span.bold {
-  margin-top: 100px;
+.clock div.time.bright.large.light  {
+  margin: 20px;
 	font-size: 65pt;
+  color: white;   
+  mix-blend-mode: difference;
+  /*position: absolute;*/
 }
 
-.clock div.time.bright.large.light {
-	font-size: 65pt;
-}
+.MMM-Wallpaper .wallpaper {
+/*  position: absolute;
+*//*  z-index: 1;
+  mix-blend-mode: difference;
+  isolation: isolate;
+*/}
+
 
 .MMM-forecast-io .wi-sunrise {
 color: #ffd700;
@@ -273,6 +320,32 @@ color: #fff;
 
 .MMM-forecast-io .summary {
     color: #999;
+} 
+
+.calendar-day {
+}
+
+.MMM-SoccerLiveScore-red {
+    color: white;
+    font-weight: 400;
+}
+
+.MMM-Wallpaper .title {
+  left: 60px;
+  top: calc(100% - 80px);
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 25px;
+  mix-blend-mode: difference;
+  color: white;
+/*  background-color: rgba(0,0,0,0.5);
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  padding: 0px;
+*/
 }
 
 
